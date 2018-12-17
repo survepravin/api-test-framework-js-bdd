@@ -1,0 +1,390 @@
+[
+  {
+    "description": "    All scenarios for the 'getSearchResults' endpoint",
+    "keyword": "Feature",
+    "name": "getSearchResults",
+    "line": 2,
+    "id": "getsearchresults",
+    "tags": [
+      {
+        "name": "@all",
+        "line": 1
+      },
+      {
+        "name": "@getSearchResults",
+        "line": 1
+      }
+    ],
+    "uri": "integration-tests\\features\\screening\\getSearchResults.feature",
+    "elements": [
+      {
+        "id": "getsearchresults;to-verify-match-status-in-response-for-various-inputs",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "To verify match status in response for various inputs",
+        "tags": [
+          {
+            "name": "@all",
+            "line": 1
+          },
+          {
+            "name": "@getSearchResults",
+            "line": 1
+          },
+          {
+            "name": "@inputs",
+            "line": 5
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "Create getSearchResults request 'Nancy Almeida' 'Mumbai-India' 'Mumbai' 'Maharashtra' 'India' '12/12/1984' '400064' 'PEPSD'",
+            "match": {
+              "location": "integration-tests\\features\\step-definitions\\GetSearchResultsSteps.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            },
+            "embeddings": [
+              {
+                "data": "Request :\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ofac=\"http://www.primeassociates.com/ComplianceManager/OFACReporter/\"><soapenv:Header/><soapenv:Body><ofac:getSearchResults><ofac:username>travelex1</ofac:username><ofac:password>travelex1</ofac:password>  <ofac:orgcode>TVX</ofac:orgcode>  <ofac:xmlinput><![CDATA[<ns1:GETSEARCHRESULTS xsi:schemaLocation=\"http://www.primeassociates.com/ComplianceManager/OFACReporter\" xmlns:ns1=\"www.primeassociates.com/ComplianceManager/OFACReporter\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"> <ns1:INPUT> <ns1:ORGANIZATION>TRAVELEX</ns1:ORGANIZATION> <ns1:BRANCH>CURRSERV</ns1:BRANCH> <ns1:DEPT>NAM</ns1:DEPT> <ns1:SOURCE>SALT</ns1:SOURCE> <ns1:FILEIMG>PEPSD</ns1:FILEIMG> <ns1:USEDB>true</ns1:USEDB> <ns1:DELEGATED>false</ns1:DELEGATED> <ns1:RETURNORIGINALREQUEST>false</ns1:RETURNORIGINALREQUEST> <ns1:SEARCHDATA> <ns1:PARTYID>1</ns1:PARTYID> <ns1:PARTYNAME ns1:ALGORITHM=\"MatchText\" ns1:MISSPELLING=\"true\" ns1:USETEXTEXCLUDE=\"true\" ns1:MUSTMATCHTYPE=\"PARTYNAME,Keyword\"> <ns1:FULLNAME>Nancy Almeida</ns1:FULLNAME> </ns1:PARTYNAME> <ns1:PARTYADDRESS> <ns1:STREET ns1:ALGORITHM=\"None\" ns1:MISSPELLING=\"true\" ns1:USETEXTEXCLUDE=\"true\" ns1:MUSTMATCHTYPE=\"STREETADDRESS\" >Mumbai-India</ns1:STREET> <ns1:CITY ns1:ALGORITHM=\"None\" ns1:MISSPELLING=\"true\" ns1:USETEXTEXCLUDE=\"true\" ns1:MUSTMATCHTYPE=\"CITY\" >Mumbai</ns1:CITY> <ns1:STATE ns1:ALGORITHM=\"None\" ns1:MISSPELLING=\"true\" ns1:USETEXTEXCLUDE=\"true\" >Maharashtra</ns1:STATE> <ns1:POSTALCODE>400064</ns1:POSTALCODE> <ns1:COUNTRY ns1:ALGORITHM=\"None\" ns1:MISSPELLING=\"true\" ns1:USETEXTEXCLUDE=\"true\" ns1:MUSTMATCHTYPE=\"COUNTRY\" >India</ns1:COUNTRY> </ns1:PARTYADDRESS> <ns1:DATEOFBIRTH ns1:ALGORITHM=\"None\" ns1:MISSPELLING=\"true\" ns1:USETEXTEXCLUDE=\"true\" >12/12/1984</ns1:DATEOFBIRTH><ns1:PARTYOTHERDETAILS ns1:ALGORITHM=\"None\" ns1:MISSPELLING=\"true\" ns1:USETEXTEXCLUDE=\"true\">MH-43:1254678</ns1:PARTYOTHERDETAILS></ns1:SEARCHDATA> </ns1:INPUT> </ns1:GETSEARCHRESULTS>]]></ofac:xmlinput></ofac:getSearchResults></soapenv:Body></soapenv:Envelope>",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I hit endpoint with getSearchResults request",
+            "match": {
+              "location": "integration-tests\\features\\step-definitions\\GetSearchResultsSteps.js:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1307000000
+            },
+            "embeddings": [
+              {
+                "data": "Response :\n<?xml version=\"1.0\" encoding=\"utf-8\"?><soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\"  xmlns:tm=\"http://microsoft.com/wsdl/mime/textMatching/\" xmlns:tns=\"http://www.primeassociates.com/ComplianceManager/OFACReporter/\"><soap:Body><getSearchResultsResponse xmlns=\"http://www.primeassociates.com/ComplianceManager/OFACReporter/\"><getSearchResultsResult>&lt;n:GETSEARCHRESULTS xmlns:n=&quot;http://www.primeassociates.com/ComplianceManager/OFACReporter&quot;&gt;\n  &lt;n:OUTPUT&gt;\n    &lt;n:TRANSACTIONID&gt;&lt;/n:TRANSACTIONID&gt;\n    &lt;MATCHES n:COUNT=&quot;0&quot;&gt;\n    &lt;/MATCHES&gt;\n  &lt;/n:OUTPUT&gt;\n&lt;/n:GETSEARCHRESULTS&gt;\n</getSearchResultsResult></getSearchResultsResponse></soap:Body></soap:Envelope>",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "I should get 200 responseStatus",
+            "match": {
+              "location": "integration-tests\\features\\step-definitions\\GetSearchResultsSteps.js:58"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I should get matchfound 'false' in response",
+            "match": {
+              "location": "integration-tests\\features\\step-definitions\\GetSearchResultsSteps.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "getsearchresults;to-verify-match-status-in-response-for-various-inputs",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "To verify match status in response for various inputs",
+        "tags": [
+          {
+            "name": "@all",
+            "line": 1
+          },
+          {
+            "name": "@getSearchResults",
+            "line": 1
+          },
+          {
+            "name": "@inputs",
+            "line": 5
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "Create getSearchResults request 'Robert Mugabe' 'Kandahar' 'Kandaher' 'Kandaher' 'Agfanistan' '01/01/1973' '' 'PEPSD'",
+            "match": {
+              "location": "integration-tests\\features\\step-definitions\\GetSearchResultsSteps.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            },
+            "embeddings": [
+              {
+                "data": "Request :\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ofac=\"http://www.primeassociates.com/ComplianceManager/OFACReporter/\"><soapenv:Header/><soapenv:Body><ofac:getSearchResults><ofac:username>travelex1</ofac:username><ofac:password>travelex1</ofac:password>  <ofac:orgcode>TVX</ofac:orgcode>  <ofac:xmlinput><![CDATA[<ns1:GETSEARCHRESULTS xsi:schemaLocation=\"http://www.primeassociates.com/ComplianceManager/OFACReporter\" xmlns:ns1=\"www.primeassociates.com/ComplianceManager/OFACReporter\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"> <ns1:INPUT> <ns1:ORGANIZATION>TRAVELEX</ns1:ORGANIZATION> <ns1:BRANCH>CURRSERV</ns1:BRANCH> <ns1:DEPT>NAM</ns1:DEPT> <ns1:SOURCE>SALT</ns1:SOURCE> <ns1:FILEIMG>PEPSD</ns1:FILEIMG> <ns1:USEDB>true</ns1:USEDB> <ns1:DELEGATED>false</ns1:DELEGATED> <ns1:RETURNORIGINALREQUEST>false</ns1:RETURNORIGINALREQUEST> <ns1:SEARCHDATA> <ns1:PARTYID>1</ns1:PARTYID> <ns1:PARTYNAME ns1:ALGORITHM=\"MatchText\" ns1:MISSPELLING=\"true\" ns1:USETEXTEXCLUDE=\"true\" ns1:MUSTMATCHTYPE=\"PARTYNAME,Keyword\"> <ns1:FULLNAME>Robert Mugabe</ns1:FULLNAME> </ns1:PARTYNAME> <ns1:PARTYADDRESS> <ns1:STREET ns1:ALGORITHM=\"None\" ns1:MISSPELLING=\"true\" ns1:USETEXTEXCLUDE=\"true\" ns1:MUSTMATCHTYPE=\"STREETADDRESS\" >Kandahar</ns1:STREET> <ns1:CITY ns1:ALGORITHM=\"None\" ns1:MISSPELLING=\"true\" ns1:USETEXTEXCLUDE=\"true\" ns1:MUSTMATCHTYPE=\"CITY\" >Kandaher</ns1:CITY> <ns1:STATE ns1:ALGORITHM=\"None\" ns1:MISSPELLING=\"true\" ns1:USETEXTEXCLUDE=\"true\" >Kandaher</ns1:STATE> <ns1:POSTALCODE></ns1:POSTALCODE> <ns1:COUNTRY ns1:ALGORITHM=\"None\" ns1:MISSPELLING=\"true\" ns1:USETEXTEXCLUDE=\"true\" ns1:MUSTMATCHTYPE=\"COUNTRY\" >Agfanistan</ns1:COUNTRY> </ns1:PARTYADDRESS> <ns1:DATEOFBIRTH ns1:ALGORITHM=\"None\" ns1:MISSPELLING=\"true\" ns1:USETEXTEXCLUDE=\"true\" >01/01/1973</ns1:DATEOFBIRTH><ns1:PARTYOTHERDETAILS ns1:ALGORITHM=\"None\" ns1:MISSPELLING=\"true\" ns1:USETEXTEXCLUDE=\"true\">MH-43:1254678</ns1:PARTYOTHERDETAILS></ns1:SEARCHDATA> </ns1:INPUT> </ns1:GETSEARCHRESULTS>]]></ofac:xmlinput></ofac:getSearchResults></soapenv:Body></soapenv:Envelope>",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I hit endpoint with getSearchResults request",
+            "match": {
+              "location": "integration-tests\\features\\step-definitions\\GetSearchResultsSteps.js:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 860000000
+            },
+            "embeddings": [
+              {
+                "data": "Response :\n<?xml version=\"1.0\" encoding=\"utf-8\"?><soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\"  xmlns:tm=\"http://microsoft.com/wsdl/mime/textMatching/\" xmlns:tns=\"http://www.primeassociates.com/ComplianceManager/OFACReporter/\"><soap:Body><getSearchResultsResponse xmlns=\"http://www.primeassociates.com/ComplianceManager/OFACReporter/\"><getSearchResultsResult>&lt;n:GETSEARCHRESULTS xmlns:n=&quot;http://www.primeassociates.com/ComplianceManager/OFACReporter&quot;&gt;\n  &lt;n:OUTPUT&gt;\n    &lt;n:TRANSACTIONID&gt;PEP-ROBERT MUGABE-2437f096-a646-4f41-94ff-6136acd5e28f&lt;/n:TRANSACTIONID&gt;\n    &lt;MATCHES n:COUNT=&quot;2&quot;&gt;\n      &lt;MATCH n:N=&quot;0&quot;&gt;\n        &lt;n:MATCHNAME&gt;Robert Mugabe&lt;/n:MATCHNAME&gt;\n        &lt;n:ORIGINALSDNNAME&gt;Robert Mugabe&lt;/n:ORIGINALSDNNAME&gt;\n        &lt;n:MATCHTEXT&gt;NAME&lt;/n:MATCHTEXT&gt;\n        &lt;n:MATCHPROGRAM&gt;PEP&lt;/n:MATCHPROGRAM&gt;\n        &lt;n:MATCHREMARKS&gt;[USA SANCTIONS - OFAC] SDN Ref No 15541&lt;/n:MATCHREMARKS&gt;\n      &lt;/MATCH&gt;\n      &lt;MATCH n:N=&quot;1&quot;&gt;\n        &lt;n:MATCHNAME&gt;Robert Mugabe&lt;/n:MATCHNAME&gt;\n        &lt;n:ORIGINALSDNNAME&gt;Robert Mugabe&lt;/n:ORIGINALSDNNAME&gt;\n        &lt;n:MATCHTEXT&gt;NAME&lt;/n:MATCHTEXT&gt;\n        &lt;n:MATCHPROGRAM&gt;PEP&lt;/n:MATCHPROGRAM&gt;\n        &lt;n:MATCHREMARKS&gt;[USA SANCTIONS - OFAC] SDN Ref No 15541&lt;/n:MATCHREMARKS&gt;\n      &lt;/MATCH&gt;\n    &lt;/MATCHES&gt;\n  &lt;/n:OUTPUT&gt;\n  &lt;n:SEARCHSTATE&gt;\n    &lt;n:STATUS&gt;Unconfirmed&lt;/n:STATUS&gt;\n    &lt;n:DATETIME/&gt;\n  &lt;/n:SEARCHSTATE&gt;\n  &lt;n:APPROVESTATE&gt;\n    &lt;n:APPROVED&gt;false&lt;/n:APPROVED&gt;\n    &lt;n:DATETIME/&gt;\n  &lt;/n:APPROVESTATE&gt;\n  &lt;n:ANNOTATION/&gt;\n  &lt;n:REQUESTTIME/&gt;\n  &lt;n:CIFRULE/&gt;\n&lt;/n:GETSEARCHRESULTS&gt;\n</getSearchResultsResult></getSearchResultsResponse></soap:Body></soap:Envelope>",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "I should get 200 responseStatus",
+            "match": {
+              "location": "integration-tests\\features\\step-definitions\\GetSearchResultsSteps.js:58"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I should get matchfound 'true' in response",
+            "match": {
+              "location": "integration-tests\\features\\step-definitions\\GetSearchResultsSteps.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            },
+            "embeddings": [
+              {
+                "data": "<b>MATCHNAME: </b>Robert Mugabe",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "<b>ORIGINALSDNNAME: </b>Robert Mugabe",
+                "mime_type": "text/plain"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "getsearchresults;to-verify-match-status-in-response-for-various-inputs",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "To verify match status in response for various inputs",
+        "tags": [
+          {
+            "name": "@all",
+            "line": 1
+          },
+          {
+            "name": "@getSearchResults",
+            "line": 1
+          },
+          {
+            "name": "@inputs",
+            "line": 5
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "Create getSearchResults request 'Nancy Almeida' 'Mumbai-India' 'Mumbai' 'Maharashtra' 'India' '12/12/1984' '400064' 'UKSANCTIONSD'",
+            "match": {
+              "location": "integration-tests\\features\\step-definitions\\GetSearchResultsSteps.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            },
+            "embeddings": [
+              {
+                "data": "Request :\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ofac=\"http://www.primeassociates.com/ComplianceManager/OFACReporter/\"><soapenv:Header/><soapenv:Body><ofac:getSearchResults><ofac:username>travelex1</ofac:username><ofac:password>travelex1</ofac:password>  <ofac:orgcode>TVX</ofac:orgcode>  <ofac:xmlinput><![CDATA[<ns1:GETSEARCHRESULTS xsi:schemaLocation=\"http://www.primeassociates.com/ComplianceManager/OFACReporter\" xmlns:ns1=\"www.primeassociates.com/ComplianceManager/OFACReporter\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"> <ns1:INPUT> <ns1:ORGANIZATION>TRAVELEX</ns1:ORGANIZATION> <ns1:BRANCH>CURRSERV</ns1:BRANCH> <ns1:DEPT>NAM</ns1:DEPT> <ns1:SOURCE>SALT</ns1:SOURCE> <ns1:FILEIMG>UKSANCTIONSD</ns1:FILEIMG> <ns1:USEDB>true</ns1:USEDB> <ns1:DELEGATED>false</ns1:DELEGATED> <ns1:RETURNORIGINALREQUEST>false</ns1:RETURNORIGINALREQUEST> <ns1:SEARCHDATA> <ns1:PARTYID>1</ns1:PARTYID> <ns1:PARTYNAME ns1:ALGORITHM=\"MatchText\" ns1:MISSPELLING=\"true\" ns1:USETEXTEXCLUDE=\"true\" ns1:MUSTMATCHTYPE=\"PARTYNAME,Keyword\"> <ns1:FULLNAME>Nancy Almeida</ns1:FULLNAME> </ns1:PARTYNAME> <ns1:PARTYADDRESS> <ns1:STREET ns1:ALGORITHM=\"None\" ns1:MISSPELLING=\"true\" ns1:USETEXTEXCLUDE=\"true\" ns1:MUSTMATCHTYPE=\"STREETADDRESS\" >Mumbai-India</ns1:STREET> <ns1:CITY ns1:ALGORITHM=\"None\" ns1:MISSPELLING=\"true\" ns1:USETEXTEXCLUDE=\"true\" ns1:MUSTMATCHTYPE=\"CITY\" >Mumbai</ns1:CITY> <ns1:STATE ns1:ALGORITHM=\"None\" ns1:MISSPELLING=\"true\" ns1:USETEXTEXCLUDE=\"true\" >Maharashtra</ns1:STATE> <ns1:POSTALCODE>400064</ns1:POSTALCODE> <ns1:COUNTRY ns1:ALGORITHM=\"None\" ns1:MISSPELLING=\"true\" ns1:USETEXTEXCLUDE=\"true\" ns1:MUSTMATCHTYPE=\"COUNTRY\" >India</ns1:COUNTRY> </ns1:PARTYADDRESS> <ns1:DATEOFBIRTH ns1:ALGORITHM=\"None\" ns1:MISSPELLING=\"true\" ns1:USETEXTEXCLUDE=\"true\" >12/12/1984</ns1:DATEOFBIRTH><ns1:PARTYOTHERDETAILS ns1:ALGORITHM=\"None\" ns1:MISSPELLING=\"true\" ns1:USETEXTEXCLUDE=\"true\">MH-43:1254678</ns1:PARTYOTHERDETAILS></ns1:SEARCHDATA> </ns1:INPUT> </ns1:GETSEARCHRESULTS>]]></ofac:xmlinput></ofac:getSearchResults></soapenv:Body></soapenv:Envelope>",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I hit endpoint with getSearchResults request",
+            "match": {
+              "location": "integration-tests\\features\\step-definitions\\GetSearchResultsSteps.js:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 776000000
+            },
+            "embeddings": [
+              {
+                "data": "Response :\n<?xml version=\"1.0\" encoding=\"utf-8\"?><soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\"  xmlns:tm=\"http://microsoft.com/wsdl/mime/textMatching/\" xmlns:tns=\"http://www.primeassociates.com/ComplianceManager/OFACReporter/\"><soap:Body><getSearchResultsResponse xmlns=\"http://www.primeassociates.com/ComplianceManager/OFACReporter/\"><getSearchResultsResult>&lt;n:GETSEARCHRESULTS xmlns:n=&quot;http://www.primeassociates.com/ComplianceManager/OFACReporter&quot;&gt;\n  &lt;n:OUTPUT&gt;\n    &lt;n:TRANSACTIONID&gt;&lt;/n:TRANSACTIONID&gt;\n    &lt;MATCHES n:COUNT=&quot;0&quot;&gt;\n    &lt;/MATCHES&gt;\n  &lt;/n:OUTPUT&gt;\n&lt;/n:GETSEARCHRESULTS&gt;\n</getSearchResultsResult></getSearchResultsResponse></soap:Body></soap:Envelope>",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "I should get 200 responseStatus",
+            "match": {
+              "location": "integration-tests\\features\\step-definitions\\GetSearchResultsSteps.js:58"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I should get matchfound 'false' in response",
+            "match": {
+              "location": "integration-tests\\features\\step-definitions\\GetSearchResultsSteps.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "getsearchresults;to-verify-match-status-in-response-for-various-inputs",
+        "keyword": "Scenario",
+        "line": 16,
+        "name": "To verify match status in response for various inputs",
+        "tags": [
+          {
+            "name": "@all",
+            "line": 1
+          },
+          {
+            "name": "@getSearchResults",
+            "line": 1
+          },
+          {
+            "name": "@inputs",
+            "line": 5
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "Create getSearchResults request 'Robert Mugabe' 'Kandahar' 'Kandaher' 'Kandaher' 'Agfanistan' '01/01/1973' '' 'UKSANCTIONSD'",
+            "match": {
+              "location": "integration-tests\\features\\step-definitions\\GetSearchResultsSteps.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            },
+            "embeddings": [
+              {
+                "data": "Request :\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ofac=\"http://www.primeassociates.com/ComplianceManager/OFACReporter/\"><soapenv:Header/><soapenv:Body><ofac:getSearchResults><ofac:username>travelex1</ofac:username><ofac:password>travelex1</ofac:password>  <ofac:orgcode>TVX</ofac:orgcode>  <ofac:xmlinput><![CDATA[<ns1:GETSEARCHRESULTS xsi:schemaLocation=\"http://www.primeassociates.com/ComplianceManager/OFACReporter\" xmlns:ns1=\"www.primeassociates.com/ComplianceManager/OFACReporter\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"> <ns1:INPUT> <ns1:ORGANIZATION>TRAVELEX</ns1:ORGANIZATION> <ns1:BRANCH>CURRSERV</ns1:BRANCH> <ns1:DEPT>NAM</ns1:DEPT> <ns1:SOURCE>SALT</ns1:SOURCE> <ns1:FILEIMG>UKSANCTIONSD</ns1:FILEIMG> <ns1:USEDB>true</ns1:USEDB> <ns1:DELEGATED>false</ns1:DELEGATED> <ns1:RETURNORIGINALREQUEST>false</ns1:RETURNORIGINALREQUEST> <ns1:SEARCHDATA> <ns1:PARTYID>1</ns1:PARTYID> <ns1:PARTYNAME ns1:ALGORITHM=\"MatchText\" ns1:MISSPELLING=\"true\" ns1:USETEXTEXCLUDE=\"true\" ns1:MUSTMATCHTYPE=\"PARTYNAME,Keyword\"> <ns1:FULLNAME>Robert Mugabe</ns1:FULLNAME> </ns1:PARTYNAME> <ns1:PARTYADDRESS> <ns1:STREET ns1:ALGORITHM=\"None\" ns1:MISSPELLING=\"true\" ns1:USETEXTEXCLUDE=\"true\" ns1:MUSTMATCHTYPE=\"STREETADDRESS\" >Kandahar</ns1:STREET> <ns1:CITY ns1:ALGORITHM=\"None\" ns1:MISSPELLING=\"true\" ns1:USETEXTEXCLUDE=\"true\" ns1:MUSTMATCHTYPE=\"CITY\" >Kandaher</ns1:CITY> <ns1:STATE ns1:ALGORITHM=\"None\" ns1:MISSPELLING=\"true\" ns1:USETEXTEXCLUDE=\"true\" >Kandaher</ns1:STATE> <ns1:POSTALCODE></ns1:POSTALCODE> <ns1:COUNTRY ns1:ALGORITHM=\"None\" ns1:MISSPELLING=\"true\" ns1:USETEXTEXCLUDE=\"true\" ns1:MUSTMATCHTYPE=\"COUNTRY\" >Agfanistan</ns1:COUNTRY> </ns1:PARTYADDRESS> <ns1:DATEOFBIRTH ns1:ALGORITHM=\"None\" ns1:MISSPELLING=\"true\" ns1:USETEXTEXCLUDE=\"true\" >01/01/1973</ns1:DATEOFBIRTH><ns1:PARTYOTHERDETAILS ns1:ALGORITHM=\"None\" ns1:MISSPELLING=\"true\" ns1:USETEXTEXCLUDE=\"true\">MH-43:1254678</ns1:PARTYOTHERDETAILS></ns1:SEARCHDATA> </ns1:INPUT> </ns1:GETSEARCHRESULTS>]]></ofac:xmlinput></ofac:getSearchResults></soapenv:Body></soapenv:Envelope>",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I hit endpoint with getSearchResults request",
+            "match": {
+              "location": "integration-tests\\features\\step-definitions\\GetSearchResultsSteps.js:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1113000000
+            },
+            "embeddings": [
+              {
+                "data": "Response :\n<?xml version=\"1.0\" encoding=\"utf-8\"?><soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\"  xmlns:tm=\"http://microsoft.com/wsdl/mime/textMatching/\" xmlns:tns=\"http://www.primeassociates.com/ComplianceManager/OFACReporter/\"><soap:Body><getSearchResultsResponse xmlns=\"http://www.primeassociates.com/ComplianceManager/OFACReporter/\"><getSearchResultsResult>&lt;n:GETSEARCHRESULTS xmlns:n=&quot;http://www.primeassociates.com/ComplianceManager/OFACReporter&quot;&gt;\n  &lt;n:OUTPUT&gt;\n    &lt;n:TRANSACTIONID&gt;SANCTION-ROBERT MUGABE-25693e0a-30e2-4c15-ace4-2ab6f3794414&lt;/n:TRANSACTIONID&gt;\n    &lt;MATCHES n:COUNT=&quot;2&quot;&gt;\n      &lt;MATCH n:N=&quot;0&quot;&gt;\n        &lt;n:MATCHNAME&gt;Robert Mugabe&lt;/n:MATCHNAME&gt;\n        &lt;n:ORIGINALSDNNAME&gt;Robert Mugabe&lt;/n:ORIGINALSDNNAME&gt;\n        &lt;n:MATCHTEXT&gt;NAME&lt;/n:MATCHTEXT&gt;\n        &lt;n:MATCHPROGRAM&gt;PEP&lt;/n:MATCHPROGRAM&gt;\n        &lt;n:MATCHREMARKS&gt;[USA SANCTIONS - OFAC] SDN Ref No 15541&lt;/n:MATCHREMARKS&gt;\n      &lt;/MATCH&gt;\n      &lt;MATCH n:N=&quot;1&quot;&gt;\n        &lt;n:MATCHNAME&gt;Robert Mugabe&lt;/n:MATCHNAME&gt;\n        &lt;n:ORIGINALSDNNAME&gt;Robert Mugabe&lt;/n:ORIGINALSDNNAME&gt;\n        &lt;n:MATCHTEXT&gt;NAME&lt;/n:MATCHTEXT&gt;\n        &lt;n:MATCHPROGRAM&gt;PEP&lt;/n:MATCHPROGRAM&gt;\n        &lt;n:MATCHREMARKS&gt;[USA SANCTIONS - OFAC] SDN Ref No 15541&lt;/n:MATCHREMARKS&gt;\n      &lt;/MATCH&gt;\n    &lt;/MATCHES&gt;\n  &lt;/n:OUTPUT&gt;\n  &lt;n:SEARCHSTATE&gt;\n    &lt;n:STATUS&gt;Unconfirmed&lt;/n:STATUS&gt;\n    &lt;n:DATETIME/&gt;\n  &lt;/n:SEARCHSTATE&gt;\n  &lt;n:APPROVESTATE&gt;\n    &lt;n:APPROVED&gt;false&lt;/n:APPROVED&gt;\n    &lt;n:DATETIME/&gt;\n  &lt;/n:APPROVESTATE&gt;\n  &lt;n:ANNOTATION/&gt;\n  &lt;n:REQUESTTIME/&gt;\n  &lt;n:CIFRULE/&gt;\n&lt;/n:GETSEARCHRESULTS&gt;\n</getSearchResultsResult></getSearchResultsResponse></soap:Body></soap:Envelope>",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "I should get 200 responseStatus",
+            "match": {
+              "location": "integration-tests\\features\\step-definitions\\GetSearchResultsSteps.js:58"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I should get matchfound 'true' in response",
+            "match": {
+              "location": "integration-tests\\features\\step-definitions\\GetSearchResultsSteps.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            },
+            "embeddings": [
+              {
+                "data": "<b>MATCHNAME: </b>Robert Mugabe",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "<b>ORIGINALSDNNAME: </b>Robert Mugabe",
+                "mime_type": "text/plain"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

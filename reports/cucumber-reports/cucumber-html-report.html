@@ -1,0 +1,1841 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cucumber Feature Report</title>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" >
+    <style type="text/css">
+      .panel-heading {
+    padding: 0;
+}
+
+@media (min-width: 768px) {
+    .pull-right-lg {
+        float: left;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .pull-right-lg {
+        float: right;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .pull-right-lg {
+        float: right;
+    }
+}
+
+@media (min-width: 1200px) {
+    .pull-right-lg {
+        float: right;
+    }
+}
+
+.left {
+    float: left;
+}
+
+.metadata {
+    overflow: auto;
+    letter-spacing: 0.2px;
+    border-color: white;
+    line-height: 1.6;
+    color: #4d4d4d;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    padding-bottom: 3px;
+}
+
+.panel-heading a {
+    padding: 10px 15px;
+    display: block;
+    position: relative;
+    text-decoration: none;
+}
+
+.panel-heading i.glyphicon-chevron-down {
+    display: none;
+}
+
+.panel-heading i.glyphicon-chevron-right {
+    display: inline-block;
+}
+
+.panel-heading.open i.glyphicon-chevron-down {
+    display: inline-block;
+}
+
+.panel-heading.open i.glyphicon-chevron-right {
+    display: none;
+}
+
+.generated-on {
+    text-align: right;
+    padding-bottom: 10px;
+}
+
+.panel-title b {
+    padding-right: 10px;
+}
+
+.panel-heading .label-container {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.panel-heading .label-container label {
+    margin-left: 5px;
+    padding: 5px;
+}
+
+.navbar .label-container {
+    position: absolute;
+    right: 10px;
+    top: 14px;
+}
+
+.navbar {
+    margin-bottom: 10px;
+}
+
+.navbar .label {
+    font-size: 20px;
+}
+
+.navbar .project-name {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    margin-left: -100px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.tags {
+    margin-left: 18px;
+    margin-right: 20px;
+    padding-top: 5px;
+    margin-bottom: -4px;
+}
+
+.tag {
+    font-size: 13px;
+    color: #696969;
+    letter-spacing: 0.3px;
+    font-weight: bold;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+}
+
+.chart {
+    padding-bottom: 15px;
+}
+
+div.chart div div svg rect {
+    fill: #f5f5f5;
+}
+
+.arguments {
+    margin-left: 30px;
+    margin-top: 1em;
+}
+
+#directory {
+    background-color: #f0f0f0;
+}
+
+.screenshot {
+    padding: 2% 0 2% 0;
+}
+
+.description {
+    background-color: white;
+    border-color: white;
+    line-height: 1.6;
+    color: #6f6f6f;
+    font-weight: 400;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    padding: 0.1em 0.5em 1.2em 1.5em
+}
+
+#scenario-description {
+    padding-bottom: 1em;
+    padding-left: 0.2em;
+}
+
+.scrollBar {
+    overflow-x: scroll;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #f5f5f5;
+    color: black;
+}
+
+.info {
+    background-color: #fbfbfb;
+}
+
+pre {
+    display: block;
+    padding: 10px;
+    margin-top: 1em;
+    margin-right: 3em;
+    font-size: 13px;
+    line-height: 1.42857143;
+    word-break: break-all;
+    word-wrap: break-word;
+    color: #333;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.step-duration {
+    float: right;
+    color: #BDBDBD;
+}
+
+.footer-div {
+    text-align: right;
+    vertical-align: middle;
+    height: 3.5%;
+    width: 100%;
+}
+
+.footer-container {
+    margin-right: 10px;
+    margin-top: 5px;
+    width: 18%;
+    z-index: 10;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    text-align: center;
+    background-color: transparent;
+}
+
+.show-modal:hover {
+    background-color: #f0f0f0;
+}
+
+.footer-link {
+    font-size: 13px;
+    float: right;
+}
+
+.footer-link:hover {
+    color: darkgray;
+}
+
+.steps {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: -4px;
+}
+
+.all-features {
+    padding-top: 0.6em;
+}
+
+.keyword {
+    color: #616161;
+}
+
+    </style>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+        
+          <a class="navbar-brand">Cucumberjs Report</a>
+          <div class="project-name visible-md visible-lg">duedil-adapter-api-test</div>
+          <div class="label-container">
+            <span class="label label-success" title=scenarios>Passed: 4</span>
+            <span class="label label-danger" title=scenarios>Failed: 0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="generated-on">Mon Nov 05 2018 14:30:14 GMT+0530 (India Standard Time)</div>
+
+      <div class="row">
+        <div class="chart col-lg-6 col-md-6" id="piechart_features"></div>
+        <div class="chart col-lg-6 col-md-6" id="piechart_scenarios"></div>
+      </div>
+
+      
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#logOutput">
+              <i class="glyphicon glyphicon-chevron-right"></i>
+              <i class="glyphicon glyphicon-chevron-down"></i>
+              <b>Metadata</b>
+            </a>
+          </h4>
+        </div>
+        <div id="logOutput" class="panel-collapse collapse">
+          <div class="panel-body">
+            <div class="row">
+              
+             
+              
+              
+              <div class="clearfix metadata col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <div class=pull-left>
+                    <strong> App Version: </strong>1.0.0
+                  </div>
+              </div>
+              
+              
+              
+              <div class="clearfix metadata col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <div class=pull-right-lg>
+                    <strong> Test Environment: </strong>STAGING
+                  </div>
+              </div>
+              
+              
+              
+              <div class="clearfix metadata col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <div class=pull-left>
+                    <strong> Browser: </strong>NA
+                  </div>
+              </div>
+              
+              
+              
+              <div class="clearfix metadata col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <div class=pull-right-lg>
+                    <strong> Platform: </strong>NA
+                  </div>
+              </div>
+              
+              
+              
+              <div class="clearfix metadata col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <div class=pull-left>
+                    <strong> Parallel: </strong>Scenarios
+                  </div>
+              </div>
+              
+              
+              
+              <div class="clearfix metadata col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <div class=pull-right-lg>
+                    <strong> Executed: </strong>Local
+                  </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      
+
+<div class="row" xmlns="http://www.w3.org/1999/html">
+    
+    <div class="col-lg-6 col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    
+                    <div class="tags"> <span class="tag">@all</span>
+                         <span class="tag">@getSearchResults</span>
+                        
+                    </div>
+                    
+                    <a data-toggle="collapse" href="#collapseFeatureduedil_adapter_api_test0">
+                        <i class="glyphicon glyphicon-chevron-right"></i>
+                        <i class="glyphicon glyphicon-chevron-down"></i>
+                        <b>Feature:</b>getSearchResults
+                        <span class="label-container">
+              <span class="label label-success"
+                                                         title="4 Scenarios Passed">4</span>
+              
+              
+              
+              
+              
+                        </span>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseFeatureduedil_adapter_api_test0" class="panel-collapse collapse">
+                <div class="panel-body">
+                    
+                    <div class="description">    All scenarios for the 'getSearchResults' endpoint</div>
+                    
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                
+                                
+                                <div class="tags"> <span class="tag"> @inputs</span>
+                                    
+                                </div>
+                                
+                                <a data-toggle="collapse"
+                                   href="#collapseScenarioduedil_adapter_api_test0_0">
+                                    <div>
+
+                                        <div style="padding-right: 30px">
+                                            <i class="glyphicon glyphicon-chevron-right"></i>
+                                            <i class="glyphicon glyphicon-chevron-down"></i>
+                                            <b>Scenario:</b>To verify match status in response for various inputs
+                                        </div>
+                                        <div>
+                            <span class="label-container">
+                              <span class="label label-success"
+                                                               title="4 Steps Passed">4</span>
+                              
+                              
+                              
+                              
+                              
+                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseScenarioduedil_adapter_api_test0_0"
+                             class="panel-collapse collapse">
+                            <div class="panel-body">
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Given </span>
+                          <span> Create getSearchResults request &#39;Nancy Almeida&#39; &#39;Mumbai-India&#39; &#39;Mumbai&#39; &#39;Maharashtra&#39; &#39;India&#39; &#39;12/12/1984&#39; &#39;400064&#39; &#39;PEPSD&#39;</span>
+                            
+                          
+                              <span class="step-duration">
+                               4ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+                                    <a href="#info0_00"
+                                       class="toggle"
+                                       data-toggle="collapse" class="show-info">Show Info +</a>
+                                    <div id="info0_00"
+                                         class="collapse"
+                                         data-toggle="modal"
+                                         style="cursor: pointer"
+                                         data-target="#info-modal-0_00">
+                                        <pre class="info show-modal"><br>Request :
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ofac="http://www.primeassociates.com/ComplianceManager/OFACReporter/"><soapenv:Header/><soapenv:Body><ofac:getSearchResults><ofac:username>travelex1</ofac:username><ofac:password>travelex1</ofac:password>  <ofac:orgcode>TVX</ofac:orgcode>  <ofac:xmlinput><![CDATA[<ns1:GETSEARCHRESULTS xsi:schemaLocation="http://www.primeassociates.com/ComplianceManager/OFACReporter" xmlns:ns1="www.primeassociates.com/ComplianceManager/OFACReporter" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> <ns1:INPUT> <ns1:ORGANIZATION>TRAVELEX</ns1:ORGANIZATION> <ns1:BRANCH>CURRSERV</ns1:BRANCH> <ns1:DEPT>NAM</ns1:DEPT> <ns1:SOURCE>SALT</ns1:SOURCE> <ns1:FILEIMG>PEPSD</ns1:FILEIMG> <ns1:USEDB>true</ns1:USEDB> <ns1:DELEGATED>false</ns1:DELEGATED> <ns1:RETURNORIGINALREQUEST>false</ns1:RETURNORIGINALREQUEST> <ns1:SEARCHDATA> <ns1:PARTYID>1</ns1:PARTYID> <ns1:PARTYNAME ns1:ALGORITHM="MatchText" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" ns1:MUSTMATCHTYPE="PARTYNAME,Keyword"> <ns1:FULLNAME>Nancy Almeida</ns1:FULLNAME> </ns1:PARTYNAME> <ns1:PARTYADDRESS> <ns1:STREET ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" ns1:MUSTMATCHTYPE="STREETADDRESS" >Mumbai-India</ns1:STREET> <ns1:CITY ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" ns1:MUSTMATCHTYPE="CITY" >Mumbai</ns1:CITY> <ns1:STATE ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" >Maharashtra</ns1:STATE> <ns1:POSTALCODE>400064</ns1:POSTALCODE> <ns1:COUNTRY ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" ns1:MUSTMATCHTYPE="COUNTRY" >India</ns1:COUNTRY> </ns1:PARTYADDRESS> <ns1:DATEOFBIRTH ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" >12/12/1984</ns1:DATEOFBIRTH><ns1:PARTYOTHERDETAILS ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true">MH-43:1254678</ns1:PARTYOTHERDETAILS></ns1:SEARCHDATA> </ns1:INPUT> </ns1:GETSEARCHRESULTS>]]></ofac:xmlinput></ofac:getSearchResults></soapenv:Body></soapenv:Envelope></pre>
+                                    </div>
+
+                                <div class="modal fade" id="info-modal-0_00" tabindex="-1" role="dialog"
+                                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                                </button>
+                                                <h4 class="modal-title" id="info-modal-title">
+                                                    Info
+                                                </h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5>
+                                                    <pre><br>Request :
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ofac="http://www.primeassociates.com/ComplianceManager/OFACReporter/"><soapenv:Header/><soapenv:Body><ofac:getSearchResults><ofac:username>travelex1</ofac:username><ofac:password>travelex1</ofac:password>  <ofac:orgcode>TVX</ofac:orgcode>  <ofac:xmlinput><![CDATA[<ns1:GETSEARCHRESULTS xsi:schemaLocation="http://www.primeassociates.com/ComplianceManager/OFACReporter" xmlns:ns1="www.primeassociates.com/ComplianceManager/OFACReporter" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> <ns1:INPUT> <ns1:ORGANIZATION>TRAVELEX</ns1:ORGANIZATION> <ns1:BRANCH>CURRSERV</ns1:BRANCH> <ns1:DEPT>NAM</ns1:DEPT> <ns1:SOURCE>SALT</ns1:SOURCE> <ns1:FILEIMG>PEPSD</ns1:FILEIMG> <ns1:USEDB>true</ns1:USEDB> <ns1:DELEGATED>false</ns1:DELEGATED> <ns1:RETURNORIGINALREQUEST>false</ns1:RETURNORIGINALREQUEST> <ns1:SEARCHDATA> <ns1:PARTYID>1</ns1:PARTYID> <ns1:PARTYNAME ns1:ALGORITHM="MatchText" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" ns1:MUSTMATCHTYPE="PARTYNAME,Keyword"> <ns1:FULLNAME>Nancy Almeida</ns1:FULLNAME> </ns1:PARTYNAME> <ns1:PARTYADDRESS> <ns1:STREET ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" ns1:MUSTMATCHTYPE="STREETADDRESS" >Mumbai-India</ns1:STREET> <ns1:CITY ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" ns1:MUSTMATCHTYPE="CITY" >Mumbai</ns1:CITY> <ns1:STATE ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" >Maharashtra</ns1:STATE> <ns1:POSTALCODE>400064</ns1:POSTALCODE> <ns1:COUNTRY ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" ns1:MUSTMATCHTYPE="COUNTRY" >India</ns1:COUNTRY> </ns1:PARTYADDRESS> <ns1:DATEOFBIRTH ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" >12/12/1984</ns1:DATEOFBIRTH><ns1:PARTYOTHERDETAILS ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true">MH-43:1254678</ns1:PARTYOTHERDETAILS></ns1:SEARCHDATA> </ns1:INPUT> </ns1:GETSEARCHRESULTS>]]></ofac:xmlinput></ofac:getSearchResults></soapenv:Body></soapenv:Envelope></pre>
+                                                </h5>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                    Close
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> I hit endpoint with getSearchResults request</span>
+                            
+                          
+                              <span class="step-duration">
+                               1s 307ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+                                    <a href="#info0_01"
+                                       class="toggle"
+                                       data-toggle="collapse" class="show-info">Show Info +</a>
+                                    <div id="info0_01"
+                                         class="collapse"
+                                         data-toggle="modal"
+                                         style="cursor: pointer"
+                                         data-target="#info-modal-0_01">
+                                        <pre class="info show-modal"><br>Response :
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"  xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:tns="http://www.primeassociates.com/ComplianceManager/OFACReporter/"><soap:Body><getSearchResultsResponse xmlns="http://www.primeassociates.com/ComplianceManager/OFACReporter/"><getSearchResultsResult>&lt;n:GETSEARCHRESULTS xmlns:n=&quot;http://www.primeassociates.com/ComplianceManager/OFACReporter&quot;&gt;
+  &lt;n:OUTPUT&gt;
+    &lt;n:TRANSACTIONID&gt;&lt;/n:TRANSACTIONID&gt;
+    &lt;MATCHES n:COUNT=&quot;0&quot;&gt;
+    &lt;/MATCHES&gt;
+  &lt;/n:OUTPUT&gt;
+&lt;/n:GETSEARCHRESULTS&gt;
+</getSearchResultsResult></getSearchResultsResponse></soap:Body></soap:Envelope></pre>
+                                    </div>
+
+                                <div class="modal fade" id="info-modal-0_01" tabindex="-1" role="dialog"
+                                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                                </button>
+                                                <h4 class="modal-title" id="info-modal-title">
+                                                    Info
+                                                </h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5>
+                                                    <pre><br>Response :
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"  xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:tns="http://www.primeassociates.com/ComplianceManager/OFACReporter/"><soap:Body><getSearchResultsResponse xmlns="http://www.primeassociates.com/ComplianceManager/OFACReporter/"><getSearchResultsResult>&lt;n:GETSEARCHRESULTS xmlns:n=&quot;http://www.primeassociates.com/ComplianceManager/OFACReporter&quot;&gt;
+  &lt;n:OUTPUT&gt;
+    &lt;n:TRANSACTIONID&gt;&lt;/n:TRANSACTIONID&gt;
+    &lt;MATCHES n:COUNT=&quot;0&quot;&gt;
+    &lt;/MATCHES&gt;
+  &lt;/n:OUTPUT&gt;
+&lt;/n:GETSEARCHRESULTS&gt;
+</getSearchResultsResult></getSearchResultsResponse></soap:Body></soap:Envelope></pre>
+                                                </h5>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                    Close
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> I should get 200 responseStatus</span>
+                            
+                          
+                              <span class="step-duration">
+                               3ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> I should get matchfound &#39;false&#39; in response</span>
+                            
+                          
+                              <span class="step-duration">
+                               7ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                
+                                
+                                <div class="tags"> <span class="tag"> @inputs</span>
+                                    
+                                </div>
+                                
+                                <a data-toggle="collapse"
+                                   href="#collapseScenarioduedil_adapter_api_test0_1">
+                                    <div>
+
+                                        <div style="padding-right: 30px">
+                                            <i class="glyphicon glyphicon-chevron-right"></i>
+                                            <i class="glyphicon glyphicon-chevron-down"></i>
+                                            <b>Scenario:</b>To verify match status in response for various inputs
+                                        </div>
+                                        <div>
+                            <span class="label-container">
+                              <span class="label label-success"
+                                                               title="4 Steps Passed">4</span>
+                              
+                              
+                              
+                              
+                              
+                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseScenarioduedil_adapter_api_test0_1"
+                             class="panel-collapse collapse">
+                            <div class="panel-body">
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Given </span>
+                          <span> Create getSearchResults request &#39;Robert Mugabe&#39; &#39;Kandahar&#39; &#39;Kandaher&#39; &#39;Kandaher&#39; &#39;Agfanistan&#39; &#39;01/01/1973&#39; &#39;&#39; &#39;PEPSD&#39;</span>
+                            
+                          
+                              <span class="step-duration">
+                               2ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+                                    <a href="#info0_10"
+                                       class="toggle"
+                                       data-toggle="collapse" class="show-info">Show Info +</a>
+                                    <div id="info0_10"
+                                         class="collapse"
+                                         data-toggle="modal"
+                                         style="cursor: pointer"
+                                         data-target="#info-modal-0_10">
+                                        <pre class="info show-modal"><br>Request :
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ofac="http://www.primeassociates.com/ComplianceManager/OFACReporter/"><soapenv:Header/><soapenv:Body><ofac:getSearchResults><ofac:username>travelex1</ofac:username><ofac:password>travelex1</ofac:password>  <ofac:orgcode>TVX</ofac:orgcode>  <ofac:xmlinput><![CDATA[<ns1:GETSEARCHRESULTS xsi:schemaLocation="http://www.primeassociates.com/ComplianceManager/OFACReporter" xmlns:ns1="www.primeassociates.com/ComplianceManager/OFACReporter" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> <ns1:INPUT> <ns1:ORGANIZATION>TRAVELEX</ns1:ORGANIZATION> <ns1:BRANCH>CURRSERV</ns1:BRANCH> <ns1:DEPT>NAM</ns1:DEPT> <ns1:SOURCE>SALT</ns1:SOURCE> <ns1:FILEIMG>PEPSD</ns1:FILEIMG> <ns1:USEDB>true</ns1:USEDB> <ns1:DELEGATED>false</ns1:DELEGATED> <ns1:RETURNORIGINALREQUEST>false</ns1:RETURNORIGINALREQUEST> <ns1:SEARCHDATA> <ns1:PARTYID>1</ns1:PARTYID> <ns1:PARTYNAME ns1:ALGORITHM="MatchText" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" ns1:MUSTMATCHTYPE="PARTYNAME,Keyword"> <ns1:FULLNAME>Robert Mugabe</ns1:FULLNAME> </ns1:PARTYNAME> <ns1:PARTYADDRESS> <ns1:STREET ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" ns1:MUSTMATCHTYPE="STREETADDRESS" >Kandahar</ns1:STREET> <ns1:CITY ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" ns1:MUSTMATCHTYPE="CITY" >Kandaher</ns1:CITY> <ns1:STATE ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" >Kandaher</ns1:STATE> <ns1:POSTALCODE></ns1:POSTALCODE> <ns1:COUNTRY ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" ns1:MUSTMATCHTYPE="COUNTRY" >Agfanistan</ns1:COUNTRY> </ns1:PARTYADDRESS> <ns1:DATEOFBIRTH ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" >01/01/1973</ns1:DATEOFBIRTH><ns1:PARTYOTHERDETAILS ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true">MH-43:1254678</ns1:PARTYOTHERDETAILS></ns1:SEARCHDATA> </ns1:INPUT> </ns1:GETSEARCHRESULTS>]]></ofac:xmlinput></ofac:getSearchResults></soapenv:Body></soapenv:Envelope></pre>
+                                    </div>
+
+                                <div class="modal fade" id="info-modal-0_10" tabindex="-1" role="dialog"
+                                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                                </button>
+                                                <h4 class="modal-title" id="info-modal-title">
+                                                    Info
+                                                </h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5>
+                                                    <pre><br>Request :
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ofac="http://www.primeassociates.com/ComplianceManager/OFACReporter/"><soapenv:Header/><soapenv:Body><ofac:getSearchResults><ofac:username>travelex1</ofac:username><ofac:password>travelex1</ofac:password>  <ofac:orgcode>TVX</ofac:orgcode>  <ofac:xmlinput><![CDATA[<ns1:GETSEARCHRESULTS xsi:schemaLocation="http://www.primeassociates.com/ComplianceManager/OFACReporter" xmlns:ns1="www.primeassociates.com/ComplianceManager/OFACReporter" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> <ns1:INPUT> <ns1:ORGANIZATION>TRAVELEX</ns1:ORGANIZATION> <ns1:BRANCH>CURRSERV</ns1:BRANCH> <ns1:DEPT>NAM</ns1:DEPT> <ns1:SOURCE>SALT</ns1:SOURCE> <ns1:FILEIMG>PEPSD</ns1:FILEIMG> <ns1:USEDB>true</ns1:USEDB> <ns1:DELEGATED>false</ns1:DELEGATED> <ns1:RETURNORIGINALREQUEST>false</ns1:RETURNORIGINALREQUEST> <ns1:SEARCHDATA> <ns1:PARTYID>1</ns1:PARTYID> <ns1:PARTYNAME ns1:ALGORITHM="MatchText" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" ns1:MUSTMATCHTYPE="PARTYNAME,Keyword"> <ns1:FULLNAME>Robert Mugabe</ns1:FULLNAME> </ns1:PARTYNAME> <ns1:PARTYADDRESS> <ns1:STREET ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" ns1:MUSTMATCHTYPE="STREETADDRESS" >Kandahar</ns1:STREET> <ns1:CITY ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" ns1:MUSTMATCHTYPE="CITY" >Kandaher</ns1:CITY> <ns1:STATE ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" >Kandaher</ns1:STATE> <ns1:POSTALCODE></ns1:POSTALCODE> <ns1:COUNTRY ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" ns1:MUSTMATCHTYPE="COUNTRY" >Agfanistan</ns1:COUNTRY> </ns1:PARTYADDRESS> <ns1:DATEOFBIRTH ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" >01/01/1973</ns1:DATEOFBIRTH><ns1:PARTYOTHERDETAILS ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true">MH-43:1254678</ns1:PARTYOTHERDETAILS></ns1:SEARCHDATA> </ns1:INPUT> </ns1:GETSEARCHRESULTS>]]></ofac:xmlinput></ofac:getSearchResults></soapenv:Body></soapenv:Envelope></pre>
+                                                </h5>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                    Close
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> I hit endpoint with getSearchResults request</span>
+                            
+                          
+                              <span class="step-duration">
+                               860ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+                                    <a href="#info0_11"
+                                       class="toggle"
+                                       data-toggle="collapse" class="show-info">Show Info +</a>
+                                    <div id="info0_11"
+                                         class="collapse"
+                                         data-toggle="modal"
+                                         style="cursor: pointer"
+                                         data-target="#info-modal-0_11">
+                                        <pre class="info show-modal"><br>Response :
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"  xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:tns="http://www.primeassociates.com/ComplianceManager/OFACReporter/"><soap:Body><getSearchResultsResponse xmlns="http://www.primeassociates.com/ComplianceManager/OFACReporter/"><getSearchResultsResult>&lt;n:GETSEARCHRESULTS xmlns:n=&quot;http://www.primeassociates.com/ComplianceManager/OFACReporter&quot;&gt;
+  &lt;n:OUTPUT&gt;
+    &lt;n:TRANSACTIONID&gt;PEP-ROBERT MUGABE-2437f096-a646-4f41-94ff-6136acd5e28f&lt;/n:TRANSACTIONID&gt;
+    &lt;MATCHES n:COUNT=&quot;2&quot;&gt;
+      &lt;MATCH n:N=&quot;0&quot;&gt;
+        &lt;n:MATCHNAME&gt;Robert Mugabe&lt;/n:MATCHNAME&gt;
+        &lt;n:ORIGINALSDNNAME&gt;Robert Mugabe&lt;/n:ORIGINALSDNNAME&gt;
+        &lt;n:MATCHTEXT&gt;NAME&lt;/n:MATCHTEXT&gt;
+        &lt;n:MATCHPROGRAM&gt;PEP&lt;/n:MATCHPROGRAM&gt;
+        &lt;n:MATCHREMARKS&gt;[USA SANCTIONS - OFAC] SDN Ref No 15541&lt;/n:MATCHREMARKS&gt;
+      &lt;/MATCH&gt;
+      &lt;MATCH n:N=&quot;1&quot;&gt;
+        &lt;n:MATCHNAME&gt;Robert Mugabe&lt;/n:MATCHNAME&gt;
+        &lt;n:ORIGINALSDNNAME&gt;Robert Mugabe&lt;/n:ORIGINALSDNNAME&gt;
+        &lt;n:MATCHTEXT&gt;NAME&lt;/n:MATCHTEXT&gt;
+        &lt;n:MATCHPROGRAM&gt;PEP&lt;/n:MATCHPROGRAM&gt;
+        &lt;n:MATCHREMARKS&gt;[USA SANCTIONS - OFAC] SDN Ref No 15541&lt;/n:MATCHREMARKS&gt;
+      &lt;/MATCH&gt;
+    &lt;/MATCHES&gt;
+  &lt;/n:OUTPUT&gt;
+  &lt;n:SEARCHSTATE&gt;
+    &lt;n:STATUS&gt;Unconfirmed&lt;/n:STATUS&gt;
+    &lt;n:DATETIME/&gt;
+  &lt;/n:SEARCHSTATE&gt;
+  &lt;n:APPROVESTATE&gt;
+    &lt;n:APPROVED&gt;false&lt;/n:APPROVED&gt;
+    &lt;n:DATETIME/&gt;
+  &lt;/n:APPROVESTATE&gt;
+  &lt;n:ANNOTATION/&gt;
+  &lt;n:REQUESTTIME/&gt;
+  &lt;n:CIFRULE/&gt;
+&lt;/n:GETSEARCHRESULTS&gt;
+</getSearchResultsResult></getSearchResultsResponse></soap:Body></soap:Envelope></pre>
+                                    </div>
+
+                                <div class="modal fade" id="info-modal-0_11" tabindex="-1" role="dialog"
+                                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                                </button>
+                                                <h4 class="modal-title" id="info-modal-title">
+                                                    Info
+                                                </h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5>
+                                                    <pre><br>Response :
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"  xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:tns="http://www.primeassociates.com/ComplianceManager/OFACReporter/"><soap:Body><getSearchResultsResponse xmlns="http://www.primeassociates.com/ComplianceManager/OFACReporter/"><getSearchResultsResult>&lt;n:GETSEARCHRESULTS xmlns:n=&quot;http://www.primeassociates.com/ComplianceManager/OFACReporter&quot;&gt;
+  &lt;n:OUTPUT&gt;
+    &lt;n:TRANSACTIONID&gt;PEP-ROBERT MUGABE-2437f096-a646-4f41-94ff-6136acd5e28f&lt;/n:TRANSACTIONID&gt;
+    &lt;MATCHES n:COUNT=&quot;2&quot;&gt;
+      &lt;MATCH n:N=&quot;0&quot;&gt;
+        &lt;n:MATCHNAME&gt;Robert Mugabe&lt;/n:MATCHNAME&gt;
+        &lt;n:ORIGINALSDNNAME&gt;Robert Mugabe&lt;/n:ORIGINALSDNNAME&gt;
+        &lt;n:MATCHTEXT&gt;NAME&lt;/n:MATCHTEXT&gt;
+        &lt;n:MATCHPROGRAM&gt;PEP&lt;/n:MATCHPROGRAM&gt;
+        &lt;n:MATCHREMARKS&gt;[USA SANCTIONS - OFAC] SDN Ref No 15541&lt;/n:MATCHREMARKS&gt;
+      &lt;/MATCH&gt;
+      &lt;MATCH n:N=&quot;1&quot;&gt;
+        &lt;n:MATCHNAME&gt;Robert Mugabe&lt;/n:MATCHNAME&gt;
+        &lt;n:ORIGINALSDNNAME&gt;Robert Mugabe&lt;/n:ORIGINALSDNNAME&gt;
+        &lt;n:MATCHTEXT&gt;NAME&lt;/n:MATCHTEXT&gt;
+        &lt;n:MATCHPROGRAM&gt;PEP&lt;/n:MATCHPROGRAM&gt;
+        &lt;n:MATCHREMARKS&gt;[USA SANCTIONS - OFAC] SDN Ref No 15541&lt;/n:MATCHREMARKS&gt;
+      &lt;/MATCH&gt;
+    &lt;/MATCHES&gt;
+  &lt;/n:OUTPUT&gt;
+  &lt;n:SEARCHSTATE&gt;
+    &lt;n:STATUS&gt;Unconfirmed&lt;/n:STATUS&gt;
+    &lt;n:DATETIME/&gt;
+  &lt;/n:SEARCHSTATE&gt;
+  &lt;n:APPROVESTATE&gt;
+    &lt;n:APPROVED&gt;false&lt;/n:APPROVED&gt;
+    &lt;n:DATETIME/&gt;
+  &lt;/n:APPROVESTATE&gt;
+  &lt;n:ANNOTATION/&gt;
+  &lt;n:REQUESTTIME/&gt;
+  &lt;n:CIFRULE/&gt;
+&lt;/n:GETSEARCHRESULTS&gt;
+</getSearchResultsResult></getSearchResultsResponse></soap:Body></soap:Envelope></pre>
+                                                </h5>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                    Close
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> I should get 200 responseStatus</span>
+                            
+                          
+                              <span class="step-duration">
+                               1ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> I should get matchfound &#39;true&#39; in response</span>
+                            
+                          
+                              <span class="step-duration">
+                               1ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+                                    <a href="#info0_13"
+                                       class="toggle"
+                                       data-toggle="collapse" class="show-info">Show Info +</a>
+                                    <div id="info0_13"
+                                         class="collapse"
+                                         data-toggle="modal"
+                                         style="cursor: pointer"
+                                         data-target="#info-modal-0_13">
+                                        <pre class="info show-modal"><br><b>MATCHNAME: </b>Robert Mugabe<br><b>ORIGINALSDNNAME: </b>Robert Mugabe</pre>
+                                    </div>
+
+                                <div class="modal fade" id="info-modal-0_13" tabindex="-1" role="dialog"
+                                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                                </button>
+                                                <h4 class="modal-title" id="info-modal-title">
+                                                    Info
+                                                </h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5>
+                                                    <pre><br><b>MATCHNAME: </b>Robert Mugabe<br><b>ORIGINALSDNNAME: </b>Robert Mugabe</pre>
+                                                </h5>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                    Close
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                
+                                
+                                <div class="tags"> <span class="tag"> @inputs</span>
+                                    
+                                </div>
+                                
+                                <a data-toggle="collapse"
+                                   href="#collapseScenarioduedil_adapter_api_test0_2">
+                                    <div>
+
+                                        <div style="padding-right: 30px">
+                                            <i class="glyphicon glyphicon-chevron-right"></i>
+                                            <i class="glyphicon glyphicon-chevron-down"></i>
+                                            <b>Scenario:</b>To verify match status in response for various inputs
+                                        </div>
+                                        <div>
+                            <span class="label-container">
+                              <span class="label label-success"
+                                                               title="4 Steps Passed">4</span>
+                              
+                              
+                              
+                              
+                              
+                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseScenarioduedil_adapter_api_test0_2"
+                             class="panel-collapse collapse">
+                            <div class="panel-body">
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Given </span>
+                          <span> Create getSearchResults request &#39;Nancy Almeida&#39; &#39;Mumbai-India&#39; &#39;Mumbai&#39; &#39;Maharashtra&#39; &#39;India&#39; &#39;12/12/1984&#39; &#39;400064&#39; &#39;UKSANCTIONSD&#39;</span>
+                            
+                          
+                              <span class="step-duration">
+                               2ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+                                    <a href="#info0_20"
+                                       class="toggle"
+                                       data-toggle="collapse" class="show-info">Show Info +</a>
+                                    <div id="info0_20"
+                                         class="collapse"
+                                         data-toggle="modal"
+                                         style="cursor: pointer"
+                                         data-target="#info-modal-0_20">
+                                        <pre class="info show-modal"><br>Request :
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ofac="http://www.primeassociates.com/ComplianceManager/OFACReporter/"><soapenv:Header/><soapenv:Body><ofac:getSearchResults><ofac:username>travelex1</ofac:username><ofac:password>travelex1</ofac:password>  <ofac:orgcode>TVX</ofac:orgcode>  <ofac:xmlinput><![CDATA[<ns1:GETSEARCHRESULTS xsi:schemaLocation="http://www.primeassociates.com/ComplianceManager/OFACReporter" xmlns:ns1="www.primeassociates.com/ComplianceManager/OFACReporter" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> <ns1:INPUT> <ns1:ORGANIZATION>TRAVELEX</ns1:ORGANIZATION> <ns1:BRANCH>CURRSERV</ns1:BRANCH> <ns1:DEPT>NAM</ns1:DEPT> <ns1:SOURCE>SALT</ns1:SOURCE> <ns1:FILEIMG>UKSANCTIONSD</ns1:FILEIMG> <ns1:USEDB>true</ns1:USEDB> <ns1:DELEGATED>false</ns1:DELEGATED> <ns1:RETURNORIGINALREQUEST>false</ns1:RETURNORIGINALREQUEST> <ns1:SEARCHDATA> <ns1:PARTYID>1</ns1:PARTYID> <ns1:PARTYNAME ns1:ALGORITHM="MatchText" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" ns1:MUSTMATCHTYPE="PARTYNAME,Keyword"> <ns1:FULLNAME>Nancy Almeida</ns1:FULLNAME> </ns1:PARTYNAME> <ns1:PARTYADDRESS> <ns1:STREET ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" ns1:MUSTMATCHTYPE="STREETADDRESS" >Mumbai-India</ns1:STREET> <ns1:CITY ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" ns1:MUSTMATCHTYPE="CITY" >Mumbai</ns1:CITY> <ns1:STATE ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" >Maharashtra</ns1:STATE> <ns1:POSTALCODE>400064</ns1:POSTALCODE> <ns1:COUNTRY ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" ns1:MUSTMATCHTYPE="COUNTRY" >India</ns1:COUNTRY> </ns1:PARTYADDRESS> <ns1:DATEOFBIRTH ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" >12/12/1984</ns1:DATEOFBIRTH><ns1:PARTYOTHERDETAILS ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true">MH-43:1254678</ns1:PARTYOTHERDETAILS></ns1:SEARCHDATA> </ns1:INPUT> </ns1:GETSEARCHRESULTS>]]></ofac:xmlinput></ofac:getSearchResults></soapenv:Body></soapenv:Envelope></pre>
+                                    </div>
+
+                                <div class="modal fade" id="info-modal-0_20" tabindex="-1" role="dialog"
+                                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                                </button>
+                                                <h4 class="modal-title" id="info-modal-title">
+                                                    Info
+                                                </h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5>
+                                                    <pre><br>Request :
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ofac="http://www.primeassociates.com/ComplianceManager/OFACReporter/"><soapenv:Header/><soapenv:Body><ofac:getSearchResults><ofac:username>travelex1</ofac:username><ofac:password>travelex1</ofac:password>  <ofac:orgcode>TVX</ofac:orgcode>  <ofac:xmlinput><![CDATA[<ns1:GETSEARCHRESULTS xsi:schemaLocation="http://www.primeassociates.com/ComplianceManager/OFACReporter" xmlns:ns1="www.primeassociates.com/ComplianceManager/OFACReporter" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> <ns1:INPUT> <ns1:ORGANIZATION>TRAVELEX</ns1:ORGANIZATION> <ns1:BRANCH>CURRSERV</ns1:BRANCH> <ns1:DEPT>NAM</ns1:DEPT> <ns1:SOURCE>SALT</ns1:SOURCE> <ns1:FILEIMG>UKSANCTIONSD</ns1:FILEIMG> <ns1:USEDB>true</ns1:USEDB> <ns1:DELEGATED>false</ns1:DELEGATED> <ns1:RETURNORIGINALREQUEST>false</ns1:RETURNORIGINALREQUEST> <ns1:SEARCHDATA> <ns1:PARTYID>1</ns1:PARTYID> <ns1:PARTYNAME ns1:ALGORITHM="MatchText" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" ns1:MUSTMATCHTYPE="PARTYNAME,Keyword"> <ns1:FULLNAME>Nancy Almeida</ns1:FULLNAME> </ns1:PARTYNAME> <ns1:PARTYADDRESS> <ns1:STREET ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" ns1:MUSTMATCHTYPE="STREETADDRESS" >Mumbai-India</ns1:STREET> <ns1:CITY ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" ns1:MUSTMATCHTYPE="CITY" >Mumbai</ns1:CITY> <ns1:STATE ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" >Maharashtra</ns1:STATE> <ns1:POSTALCODE>400064</ns1:POSTALCODE> <ns1:COUNTRY ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" ns1:MUSTMATCHTYPE="COUNTRY" >India</ns1:COUNTRY> </ns1:PARTYADDRESS> <ns1:DATEOFBIRTH ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" >12/12/1984</ns1:DATEOFBIRTH><ns1:PARTYOTHERDETAILS ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true">MH-43:1254678</ns1:PARTYOTHERDETAILS></ns1:SEARCHDATA> </ns1:INPUT> </ns1:GETSEARCHRESULTS>]]></ofac:xmlinput></ofac:getSearchResults></soapenv:Body></soapenv:Envelope></pre>
+                                                </h5>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                    Close
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> I hit endpoint with getSearchResults request</span>
+                            
+                          
+                              <span class="step-duration">
+                               776ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+                                    <a href="#info0_21"
+                                       class="toggle"
+                                       data-toggle="collapse" class="show-info">Show Info +</a>
+                                    <div id="info0_21"
+                                         class="collapse"
+                                         data-toggle="modal"
+                                         style="cursor: pointer"
+                                         data-target="#info-modal-0_21">
+                                        <pre class="info show-modal"><br>Response :
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"  xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:tns="http://www.primeassociates.com/ComplianceManager/OFACReporter/"><soap:Body><getSearchResultsResponse xmlns="http://www.primeassociates.com/ComplianceManager/OFACReporter/"><getSearchResultsResult>&lt;n:GETSEARCHRESULTS xmlns:n=&quot;http://www.primeassociates.com/ComplianceManager/OFACReporter&quot;&gt;
+  &lt;n:OUTPUT&gt;
+    &lt;n:TRANSACTIONID&gt;&lt;/n:TRANSACTIONID&gt;
+    &lt;MATCHES n:COUNT=&quot;0&quot;&gt;
+    &lt;/MATCHES&gt;
+  &lt;/n:OUTPUT&gt;
+&lt;/n:GETSEARCHRESULTS&gt;
+</getSearchResultsResult></getSearchResultsResponse></soap:Body></soap:Envelope></pre>
+                                    </div>
+
+                                <div class="modal fade" id="info-modal-0_21" tabindex="-1" role="dialog"
+                                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                                </button>
+                                                <h4 class="modal-title" id="info-modal-title">
+                                                    Info
+                                                </h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5>
+                                                    <pre><br>Response :
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"  xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:tns="http://www.primeassociates.com/ComplianceManager/OFACReporter/"><soap:Body><getSearchResultsResponse xmlns="http://www.primeassociates.com/ComplianceManager/OFACReporter/"><getSearchResultsResult>&lt;n:GETSEARCHRESULTS xmlns:n=&quot;http://www.primeassociates.com/ComplianceManager/OFACReporter&quot;&gt;
+  &lt;n:OUTPUT&gt;
+    &lt;n:TRANSACTIONID&gt;&lt;/n:TRANSACTIONID&gt;
+    &lt;MATCHES n:COUNT=&quot;0&quot;&gt;
+    &lt;/MATCHES&gt;
+  &lt;/n:OUTPUT&gt;
+&lt;/n:GETSEARCHRESULTS&gt;
+</getSearchResultsResult></getSearchResultsResponse></soap:Body></soap:Envelope></pre>
+                                                </h5>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                    Close
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> I should get 200 responseStatus</span>
+                            
+                          
+                              <span class="step-duration">
+                               1ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> I should get matchfound &#39;false&#39; in response</span>
+                            
+                          
+                              <span class="step-duration">
+                               3ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                
+                                
+                                <div class="tags"> <span class="tag"> @inputs</span>
+                                    
+                                </div>
+                                
+                                <a data-toggle="collapse"
+                                   href="#collapseScenarioduedil_adapter_api_test0_3">
+                                    <div>
+
+                                        <div style="padding-right: 30px">
+                                            <i class="glyphicon glyphicon-chevron-right"></i>
+                                            <i class="glyphicon glyphicon-chevron-down"></i>
+                                            <b>Scenario:</b>To verify match status in response for various inputs
+                                        </div>
+                                        <div>
+                            <span class="label-container">
+                              <span class="label label-success"
+                                                               title="4 Steps Passed">4</span>
+                              
+                              
+                              
+                              
+                              
+                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseScenarioduedil_adapter_api_test0_3"
+                             class="panel-collapse collapse">
+                            <div class="panel-body">
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Given </span>
+                          <span> Create getSearchResults request &#39;Robert Mugabe&#39; &#39;Kandahar&#39; &#39;Kandaher&#39; &#39;Kandaher&#39; &#39;Agfanistan&#39; &#39;01/01/1973&#39; &#39;&#39; &#39;UKSANCTIONSD&#39;</span>
+                            
+                          
+                              <span class="step-duration">
+                               3ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+                                    <a href="#info0_30"
+                                       class="toggle"
+                                       data-toggle="collapse" class="show-info">Show Info +</a>
+                                    <div id="info0_30"
+                                         class="collapse"
+                                         data-toggle="modal"
+                                         style="cursor: pointer"
+                                         data-target="#info-modal-0_30">
+                                        <pre class="info show-modal"><br>Request :
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ofac="http://www.primeassociates.com/ComplianceManager/OFACReporter/"><soapenv:Header/><soapenv:Body><ofac:getSearchResults><ofac:username>travelex1</ofac:username><ofac:password>travelex1</ofac:password>  <ofac:orgcode>TVX</ofac:orgcode>  <ofac:xmlinput><![CDATA[<ns1:GETSEARCHRESULTS xsi:schemaLocation="http://www.primeassociates.com/ComplianceManager/OFACReporter" xmlns:ns1="www.primeassociates.com/ComplianceManager/OFACReporter" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> <ns1:INPUT> <ns1:ORGANIZATION>TRAVELEX</ns1:ORGANIZATION> <ns1:BRANCH>CURRSERV</ns1:BRANCH> <ns1:DEPT>NAM</ns1:DEPT> <ns1:SOURCE>SALT</ns1:SOURCE> <ns1:FILEIMG>UKSANCTIONSD</ns1:FILEIMG> <ns1:USEDB>true</ns1:USEDB> <ns1:DELEGATED>false</ns1:DELEGATED> <ns1:RETURNORIGINALREQUEST>false</ns1:RETURNORIGINALREQUEST> <ns1:SEARCHDATA> <ns1:PARTYID>1</ns1:PARTYID> <ns1:PARTYNAME ns1:ALGORITHM="MatchText" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" ns1:MUSTMATCHTYPE="PARTYNAME,Keyword"> <ns1:FULLNAME>Robert Mugabe</ns1:FULLNAME> </ns1:PARTYNAME> <ns1:PARTYADDRESS> <ns1:STREET ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" ns1:MUSTMATCHTYPE="STREETADDRESS" >Kandahar</ns1:STREET> <ns1:CITY ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" ns1:MUSTMATCHTYPE="CITY" >Kandaher</ns1:CITY> <ns1:STATE ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" >Kandaher</ns1:STATE> <ns1:POSTALCODE></ns1:POSTALCODE> <ns1:COUNTRY ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" ns1:MUSTMATCHTYPE="COUNTRY" >Agfanistan</ns1:COUNTRY> </ns1:PARTYADDRESS> <ns1:DATEOFBIRTH ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" >01/01/1973</ns1:DATEOFBIRTH><ns1:PARTYOTHERDETAILS ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true">MH-43:1254678</ns1:PARTYOTHERDETAILS></ns1:SEARCHDATA> </ns1:INPUT> </ns1:GETSEARCHRESULTS>]]></ofac:xmlinput></ofac:getSearchResults></soapenv:Body></soapenv:Envelope></pre>
+                                    </div>
+
+                                <div class="modal fade" id="info-modal-0_30" tabindex="-1" role="dialog"
+                                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                                </button>
+                                                <h4 class="modal-title" id="info-modal-title">
+                                                    Info
+                                                </h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5>
+                                                    <pre><br>Request :
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ofac="http://www.primeassociates.com/ComplianceManager/OFACReporter/"><soapenv:Header/><soapenv:Body><ofac:getSearchResults><ofac:username>travelex1</ofac:username><ofac:password>travelex1</ofac:password>  <ofac:orgcode>TVX</ofac:orgcode>  <ofac:xmlinput><![CDATA[<ns1:GETSEARCHRESULTS xsi:schemaLocation="http://www.primeassociates.com/ComplianceManager/OFACReporter" xmlns:ns1="www.primeassociates.com/ComplianceManager/OFACReporter" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> <ns1:INPUT> <ns1:ORGANIZATION>TRAVELEX</ns1:ORGANIZATION> <ns1:BRANCH>CURRSERV</ns1:BRANCH> <ns1:DEPT>NAM</ns1:DEPT> <ns1:SOURCE>SALT</ns1:SOURCE> <ns1:FILEIMG>UKSANCTIONSD</ns1:FILEIMG> <ns1:USEDB>true</ns1:USEDB> <ns1:DELEGATED>false</ns1:DELEGATED> <ns1:RETURNORIGINALREQUEST>false</ns1:RETURNORIGINALREQUEST> <ns1:SEARCHDATA> <ns1:PARTYID>1</ns1:PARTYID> <ns1:PARTYNAME ns1:ALGORITHM="MatchText" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" ns1:MUSTMATCHTYPE="PARTYNAME,Keyword"> <ns1:FULLNAME>Robert Mugabe</ns1:FULLNAME> </ns1:PARTYNAME> <ns1:PARTYADDRESS> <ns1:STREET ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" ns1:MUSTMATCHTYPE="STREETADDRESS" >Kandahar</ns1:STREET> <ns1:CITY ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" ns1:MUSTMATCHTYPE="CITY" >Kandaher</ns1:CITY> <ns1:STATE ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" >Kandaher</ns1:STATE> <ns1:POSTALCODE></ns1:POSTALCODE> <ns1:COUNTRY ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" ns1:MUSTMATCHTYPE="COUNTRY" >Agfanistan</ns1:COUNTRY> </ns1:PARTYADDRESS> <ns1:DATEOFBIRTH ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" >01/01/1973</ns1:DATEOFBIRTH><ns1:PARTYOTHERDETAILS ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true">MH-43:1254678</ns1:PARTYOTHERDETAILS></ns1:SEARCHDATA> </ns1:INPUT> </ns1:GETSEARCHRESULTS>]]></ofac:xmlinput></ofac:getSearchResults></soapenv:Body></soapenv:Envelope></pre>
+                                                </h5>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                    Close
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> I hit endpoint with getSearchResults request</span>
+                            
+                          
+                              <span class="step-duration">
+                               1s 113ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+                                    <a href="#info0_31"
+                                       class="toggle"
+                                       data-toggle="collapse" class="show-info">Show Info +</a>
+                                    <div id="info0_31"
+                                         class="collapse"
+                                         data-toggle="modal"
+                                         style="cursor: pointer"
+                                         data-target="#info-modal-0_31">
+                                        <pre class="info show-modal"><br>Response :
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"  xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:tns="http://www.primeassociates.com/ComplianceManager/OFACReporter/"><soap:Body><getSearchResultsResponse xmlns="http://www.primeassociates.com/ComplianceManager/OFACReporter/"><getSearchResultsResult>&lt;n:GETSEARCHRESULTS xmlns:n=&quot;http://www.primeassociates.com/ComplianceManager/OFACReporter&quot;&gt;
+  &lt;n:OUTPUT&gt;
+    &lt;n:TRANSACTIONID&gt;SANCTION-ROBERT MUGABE-25693e0a-30e2-4c15-ace4-2ab6f3794414&lt;/n:TRANSACTIONID&gt;
+    &lt;MATCHES n:COUNT=&quot;2&quot;&gt;
+      &lt;MATCH n:N=&quot;0&quot;&gt;
+        &lt;n:MATCHNAME&gt;Robert Mugabe&lt;/n:MATCHNAME&gt;
+        &lt;n:ORIGINALSDNNAME&gt;Robert Mugabe&lt;/n:ORIGINALSDNNAME&gt;
+        &lt;n:MATCHTEXT&gt;NAME&lt;/n:MATCHTEXT&gt;
+        &lt;n:MATCHPROGRAM&gt;PEP&lt;/n:MATCHPROGRAM&gt;
+        &lt;n:MATCHREMARKS&gt;[USA SANCTIONS - OFAC] SDN Ref No 15541&lt;/n:MATCHREMARKS&gt;
+      &lt;/MATCH&gt;
+      &lt;MATCH n:N=&quot;1&quot;&gt;
+        &lt;n:MATCHNAME&gt;Robert Mugabe&lt;/n:MATCHNAME&gt;
+        &lt;n:ORIGINALSDNNAME&gt;Robert Mugabe&lt;/n:ORIGINALSDNNAME&gt;
+        &lt;n:MATCHTEXT&gt;NAME&lt;/n:MATCHTEXT&gt;
+        &lt;n:MATCHPROGRAM&gt;PEP&lt;/n:MATCHPROGRAM&gt;
+        &lt;n:MATCHREMARKS&gt;[USA SANCTIONS - OFAC] SDN Ref No 15541&lt;/n:MATCHREMARKS&gt;
+      &lt;/MATCH&gt;
+    &lt;/MATCHES&gt;
+  &lt;/n:OUTPUT&gt;
+  &lt;n:SEARCHSTATE&gt;
+    &lt;n:STATUS&gt;Unconfirmed&lt;/n:STATUS&gt;
+    &lt;n:DATETIME/&gt;
+  &lt;/n:SEARCHSTATE&gt;
+  &lt;n:APPROVESTATE&gt;
+    &lt;n:APPROVED&gt;false&lt;/n:APPROVED&gt;
+    &lt;n:DATETIME/&gt;
+  &lt;/n:APPROVESTATE&gt;
+  &lt;n:ANNOTATION/&gt;
+  &lt;n:REQUESTTIME/&gt;
+  &lt;n:CIFRULE/&gt;
+&lt;/n:GETSEARCHRESULTS&gt;
+</getSearchResultsResult></getSearchResultsResponse></soap:Body></soap:Envelope></pre>
+                                    </div>
+
+                                <div class="modal fade" id="info-modal-0_31" tabindex="-1" role="dialog"
+                                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                                </button>
+                                                <h4 class="modal-title" id="info-modal-title">
+                                                    Info
+                                                </h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5>
+                                                    <pre><br>Response :
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"  xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:tns="http://www.primeassociates.com/ComplianceManager/OFACReporter/"><soap:Body><getSearchResultsResponse xmlns="http://www.primeassociates.com/ComplianceManager/OFACReporter/"><getSearchResultsResult>&lt;n:GETSEARCHRESULTS xmlns:n=&quot;http://www.primeassociates.com/ComplianceManager/OFACReporter&quot;&gt;
+  &lt;n:OUTPUT&gt;
+    &lt;n:TRANSACTIONID&gt;SANCTION-ROBERT MUGABE-25693e0a-30e2-4c15-ace4-2ab6f3794414&lt;/n:TRANSACTIONID&gt;
+    &lt;MATCHES n:COUNT=&quot;2&quot;&gt;
+      &lt;MATCH n:N=&quot;0&quot;&gt;
+        &lt;n:MATCHNAME&gt;Robert Mugabe&lt;/n:MATCHNAME&gt;
+        &lt;n:ORIGINALSDNNAME&gt;Robert Mugabe&lt;/n:ORIGINALSDNNAME&gt;
+        &lt;n:MATCHTEXT&gt;NAME&lt;/n:MATCHTEXT&gt;
+        &lt;n:MATCHPROGRAM&gt;PEP&lt;/n:MATCHPROGRAM&gt;
+        &lt;n:MATCHREMARKS&gt;[USA SANCTIONS - OFAC] SDN Ref No 15541&lt;/n:MATCHREMARKS&gt;
+      &lt;/MATCH&gt;
+      &lt;MATCH n:N=&quot;1&quot;&gt;
+        &lt;n:MATCHNAME&gt;Robert Mugabe&lt;/n:MATCHNAME&gt;
+        &lt;n:ORIGINALSDNNAME&gt;Robert Mugabe&lt;/n:ORIGINALSDNNAME&gt;
+        &lt;n:MATCHTEXT&gt;NAME&lt;/n:MATCHTEXT&gt;
+        &lt;n:MATCHPROGRAM&gt;PEP&lt;/n:MATCHPROGRAM&gt;
+        &lt;n:MATCHREMARKS&gt;[USA SANCTIONS - OFAC] SDN Ref No 15541&lt;/n:MATCHREMARKS&gt;
+      &lt;/MATCH&gt;
+    &lt;/MATCHES&gt;
+  &lt;/n:OUTPUT&gt;
+  &lt;n:SEARCHSTATE&gt;
+    &lt;n:STATUS&gt;Unconfirmed&lt;/n:STATUS&gt;
+    &lt;n:DATETIME/&gt;
+  &lt;/n:SEARCHSTATE&gt;
+  &lt;n:APPROVESTATE&gt;
+    &lt;n:APPROVED&gt;false&lt;/n:APPROVED&gt;
+    &lt;n:DATETIME/&gt;
+  &lt;/n:APPROVESTATE&gt;
+  &lt;n:ANNOTATION/&gt;
+  &lt;n:REQUESTTIME/&gt;
+  &lt;n:CIFRULE/&gt;
+&lt;/n:GETSEARCHRESULTS&gt;
+</getSearchResultsResult></getSearchResultsResponse></soap:Body></soap:Envelope></pre>
+                                                </h5>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                    Close
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> I should get 200 responseStatus</span>
+                            
+                          
+                              <span class="step-duration">
+                               1ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> I should get matchfound &#39;true&#39; in response</span>
+                            
+                          
+                              <span class="step-duration">
+                               2ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+                                    <a href="#info0_33"
+                                       class="toggle"
+                                       data-toggle="collapse" class="show-info">Show Info +</a>
+                                    <div id="info0_33"
+                                         class="collapse"
+                                         data-toggle="modal"
+                                         style="cursor: pointer"
+                                         data-target="#info-modal-0_33">
+                                        <pre class="info show-modal"><br><b>MATCHNAME: </b>Robert Mugabe<br><b>ORIGINALSDNNAME: </b>Robert Mugabe</pre>
+                                    </div>
+
+                                <div class="modal fade" id="info-modal-0_33" tabindex="-1" role="dialog"
+                                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                                </button>
+                                                <h4 class="modal-title" id="info-modal-title">
+                                                    Info
+                                                </h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5>
+                                                    <pre><br><b>MATCHNAME: </b>Robert Mugabe<br><b>ORIGINALSDNNAME: </b>Robert Mugabe</pre>
+                                                </h5>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                    Close
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+
+
+
+    </div>
+
+    <div class="navbar-fixed-bottom row-fluid footer-div ">
+      <div class="navbar-inner">
+        <div class="footer-container">
+          <a  target="_blank" href="https://www.npmjs.com/package/cucumber-html-reporter">
+            <div class="text-muted footer-link">
+              generated by @cucumber-html-reporter
+            </div>
+             </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load("visualization", "1", {packages: ["corechart"]});
+        google.setOnLoadCallback(function() {drawChart({
+                                                            "title" : "Features",
+                                                            "failed" : 0,
+                                                            "passed" : 1,
+                                                            "notdefined" : 0,
+                                                            "pending" : 0,
+                                                            "skipped" : 0,
+                                                            "ambiguous" : 0
+                                                        })
+                                            });
+        google.setOnLoadCallback(function() {drawChart({
+                                                            "title" : "Scenarios",
+                                                            "failed" : 0,
+                                                            "passed" : 4,
+                                                            "notdefined" : 0,
+                                                            "pending" : 0,
+                                                            "skipped" : 0,
+                                                            "ambiguous" : 0
+                                                        })
+                                            });
+    </script>
+    <script>
+      $(document).ready(function() {
+    $('.collapse').on('hide.bs.collapse', function(e) {
+        e.stopPropagation();
+        $(this).prev().removeClass('open');
+    }).on('show.bs.collapse', function(e) {
+        e.stopPropagation();
+        $(this).prev().addClass('open');
+    });
+
+    var $generated = $('.generated-on');
+
+    $generated.text('Generated ' + moment($generated.text()).fromNow());
+});
+
+      function drawChart(chartData) {
+    var data = google.visualization.arrayToDataTable([
+        ['Task', 'Cucumber Results'],
+        ['Passed', chartData.passed],
+        ['Failed', chartData.failed],
+        ['Pending', chartData.pending],
+        ['Undefined', chartData.notdefined],
+        ['Ambiguous', chartData.ambiguous],
+        ['Skipped', chartData.skipped]        
+    ]);
+
+    var total = chartData.passed + chartData.failed + (chartData.pending || 0) + (chartData.notdefined || 0) + (chartData.ambiguous || 0) + (chartData.skipped || 0);
+    var title;
+
+    if (total === 1) {
+        title = total + ' ' + chartData.title.slice(0, -1)
+    } else {
+        title = total + ' ' + chartData.title;
+    }
+
+    var options = {
+        width: '100%',
+        height: 240,
+        title: title,
+        is3D: true,
+        colors: ['#5cb85c', '#d9534f', '#999', '#5bc0de', '#428bca', '#f0ad4e'],
+        fontSize: '13',
+        fontName: '"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif',
+        slices: {
+            1: {offset: 0.4},
+            2: {offset: 0.4},
+            3: {offset: 0.4},
+            4: {offset: 0.4},
+            5: {offset: 0.4},
+            6: {offset: 0.4}
+        },
+        titleTextStyle: {
+            fontSize: '13',
+            color: '#5e5e5e'
+        }
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('piechart_' + chartData.title.toLowerCase()));
+    chart.draw(data, options);
+}
+      $('a.toggle').on('click', function() {
+
+    if ($(this).text() === 'Screenshot -') {
+        // $(this).text('Screenshot +');
+        $(this).next('a.screenshot').find('img').hide();
+    } else if($(this).text() === 'Screenshot +') {
+        // $(this).text('Screenshot -');
+        $(this).next('a.screenshot').find('img').show();
+    }
+
+    if ($(this).text().includes(' -')) {
+        $(this).text($(this).text().replace(' -', ' +'));
+    } else {
+        $(this).text($(this).text().replace(' +', ' -'));
+    }
+});
+
+    </script>
+  </body>
+</html>

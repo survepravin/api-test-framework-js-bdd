@@ -1,0 +1,22 @@
+{
+  "name": "duedil-adapter-api-test",
+  "version": "1.0.0",
+  "description": "Duedil Adapter API test",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "chai": "^4.1.2",
+    "cucumber": "^5.0.0",
+    "cucumber-html-reporter": "^4.0.4",
+    "express": "^4.16.3",
+    "gulp": "^3.9.1",
+    "request": "^2.88.0",
+    "util": "^0.11.0",
+    "xml2js": "^0.4.19"
+  },
+  "scripts": {
+    "test": "cucumber-js ./integration-tests/features --tags @inputs --format json:./reports/cucumber-reports/cucumber-json-report.json & gulp cucumberReports"
+  },
+  "author": "pravin.surve@travelex.com, akshay.padekar@travelex.com",
+  "license": "ISC"
+}

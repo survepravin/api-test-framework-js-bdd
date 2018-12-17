@@ -1,0 +1,39 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ofac="http://www.primeassociates.com/ComplianceManager/OFACReporter/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ofac:getSearchResults>
+        <ofac:username>travelex1</ofac:username>
+        <ofac:password>travelex1</ofac:password>
+        <ofac:orgcode>TVX</ofac:orgcode>
+         <ofac:xmlinput>
+         <![CDATA[<ns1:GETSEARCHRESULTS xsi:schemaLocation="http://www.primeassociates.com/ComplianceManager/OFACReporter" xmlns:ns1="www.primeassociates.com/ComplianceManager/OFACReporter" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <ns1:INPUT>
+                <ns1:ORGANIZATION>TRAVELEX</ns1:ORGANIZATION>
+                <ns1:BRANCH>CURRSERV</ns1:BRANCH>
+                <ns1:DEPT>NAM</ns1:DEPT>
+                <ns1:SOURCE></ns1:SOURCE>
+                <ns1:FILEIMG>PEPSD</ns1:FILEIMG>
+                <ns1:USEDB>true</ns1:USEDB>
+                <ns1:DELEGATED>false</ns1:DELEGATED>
+                <ns1:RETURNORIGINALREQUEST>false</ns1:RETURNORIGINALREQUEST>
+                <ns1:SEARCHDATA>
+                    <ns1:PARTYID>1</ns1:PARTYID>
+                    <ns1:PARTYNAME ns1:ALGORITHM="MatchText" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" ns1:MUSTMATCHTYPE="PARTYNAME,Keyword">
+                        <ns1:FULLNAME>confirmedconfirmed</ns1:FULLNAME>
+                    </ns1:PARTYNAME>
+                    <ns1:PARTYADDRESS>
+                        <ns1:STREET ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" ns1:MUSTMATCHTYPE="STREETADDRESS" >10 Butts Road</ns1:STREET>
+                        <ns1:CITY ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" ns1:MUSTMATCHTYPE="CITY" >WOLVERHAMPTON</ns1:CITY>
+                        <ns1:STATE ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" ></ns1:STATE>
+                        <ns1:POSTALCODE>WV4 5QD</ns1:POSTALCODE>
+                        <ns1:COUNTRY ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" ns1:MUSTMATCHTYPE="COUNTRY" >United Kingdom</ns1:COUNTRY>
+                    </ns1:PARTYADDRESS>
+                    <ns1:DATEOFBIRTH ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true" >01/01/1990</ns1:DATEOFBIRTH>
+                   <ns1:PARTYOTHERDETAILS ns1:ALGORITHM="None" ns1:MISSPELLING="true" ns1:USETEXTEXCLUDE="true"> MH-43:1254678</ns1:PARTYOTHERDETAILS>
+               </ns1:SEARCHDATA>
+            </ns1:INPUT>
+        </ns1:GETSEARCHRESULTS>]]>
+        </ofac:xmlinput>
+      </ofac:getSearchResults>
+   </soapenv:Body>
+</soapenv:Envelope>

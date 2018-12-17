@@ -1,0 +1,11 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ofac="http://www.primeassociates.com/ComplianceManager/OFACReporter/">
+  <soapenv:Header/>
+  <soapenv:Body>
+     <ofac:getSearchResultsStatus>
+        <ofac:username>travelex1</ofac:username>
+        <ofac:password>travelex1</ofac:password>
+        <ofac:orgcode>TVX</ofac:orgcode>
+        <ofac:xmlinput></ofac:xmlinput>
+     </ofac:getSearchResultsStatus>
+  </soapenv:Body>
+</soapenv:Envelope>
